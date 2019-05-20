@@ -1,0 +1,86 @@
+h1{
+	display: table;
+	margin-top: auto;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-bottom: auto;
+}
+
+h2{
+	font-size: 40px;
+	margin-bottom: 0;
+}
+hr{
+	border: 2px solid green;
+	width: 50%;
+	margin-left: 0; 
+}
+
+ul{
+  	display: table;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+#header{
+	height: auto;
+    width: auto;
+    font-size: 200%;
+    padding: 2%;
+    background-color: red;
+}
+
+#topMenu .nav{
+	margin-left: auto;
+	margin-right: auto;
+	padding: auto;
+}
+
+#topMenu ul li{
+	list-style: none;
+	color: white; 
+	background-color: #2d2d2d;
+	float: left;
+	line-height: 300%; 
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+#topMenu .menuLink{
+	text-decoration:none;
+	color: white;
+	display: block;
+	width: 150px;
+	font-size: 20px;
+	font-weight: bold;
+} 
+
+.left{
+  float: left;
+  width: 40%;
+
+	background-color: blue;
+}
+
+.right{
+  float: right;
+  width: 60%;
+  
+	background-color: blue;
+}
+
+.img{
+	vertical-align: middle;
+	width: 50%; 
+	height: 50%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.Profile{
+	list-style: none;
+	font-size: 30px;
+	float: left: 
+}
