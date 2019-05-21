@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, height-device-height, initial-scale=1.0, user-scalable-no">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css"/>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        
+        <link href="fotorama.css" rel="stylesheet">
+        <script src="fotorama.js"></script>
+        <title>영화소개</title>
+        <style type="text/css">
+            
+            #pic_boss{
+                float:left;
+                margin-right: 10px;
+                margin-top: 10px;
+                -webkit-transition-propert:width;
+                -webkit-transition-duration: .3s;
+            }
+            
+            .small{
+                width:30%;   
+            }
+            
+            .targe{
+                width:100%;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // flag값을 false로 설정
+                $("#pic_boss").data("flag", "false");
+                //이미지를 클릭하려면
+                $("#pic_boss").click(function(){
+                    var bflag=$("#pic_boss").data("flag");
+                    if(bflag=="false"){
+                        bflag="true";
+                        $("#pic_boss").removeClass("small");
+                        $("#pic_boss").addClass("large");
+                    }else{
+                        bflag="false"
+                        $("#pic_boss").removeClass("large");
+                        $("#pic_boss").addClass("small");
+                    }
+                    
+                        $("#pic_boss").data("flag", bflag);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div data-role="page">
+    
+            <div data-role="header">
+                <a href="index.html" rel="external" data-icon="back">back</a>
+                <a href="index.html" rel="external" data-icon="home" data-iconpos="notext">홈</a>
+                <h1>스크린샷</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="screenshot.html" rel="external" class="ui-btn-active">스크린샷</a></li>
+                        <li><a href="interduce.html" rel="external">영화소개</a></li>
+                        <li><a href="video.html" rel="external">예고편</a></li>
+                        <li><a href="map.html" rel="external">극장위치</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div data-role="content">
+                <div class="fotorama" data-nav="thumbs">
+                    <img src="image1.png">
+                    <img src="image2.png">
+                    <img src="image3.png">
+                    <img src="image4.png">
+                    <img src="image5.png">
+                    <img src="image6.png">
+                    <img src="image7.png">
+                    <img src="image8.png">
+                    <img src="image9.png">
+                    <img src="image10.png">
+                </div>
+            </div>
+            
+            <div data-role="footer">
+                Copyright&copy; Midnight In Paris.
+            </div>
+            </div>
+    </body>
+</html>

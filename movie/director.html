@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, height-device-height, initial-scale=1.0, user-scalable-no">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css"/>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        
+        <link href="fotorama.css" rel="stylesheet">
+        <script src="fotorama.js"></script>
+        <title>우디 앨런</title>
+        
+        <style type="text/css">
+            
+            #pic_wilson{
+                margin-right: 10px;
+                margin-top: 10px;
+                -webkit-transition-propert:width;
+                -webkit-transition-duration: .3s;
+            }
+            
+            .small{
+                width:30%;   
+            }
+            
+            .targe{
+                width:100%;
+            }
+        </style>
+        
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // flag값을 false로 설정
+                $("#pic_Allen").data("flag", "false");
+                //이미지를 클릭하려면
+                $("#pic_Allen").click(function(){
+                    var bflag=$("#pic_Allen").data("flag");
+                    if(bflag=="false"){
+                        bflag="true";
+                        $("#pic_Allen").removeClass("small");
+                        $("#pic_Allen").addClass("large");
+                    }else{
+                        bflag="false"
+                        $("#pic_Allen").removeClass("large");
+                        $("#pic_Allen").addClass("small");
+                    }
+                    
+                        $("#pic_Allen").data("flag", bflag);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div data-role="page">
+    
+            <div data-role="header">
+                <a href="interduce.html" rel="external" data-icon="back">back</a>
+                <a href="index.html" rel="external" data-icon="home" data-iconpos="notext">홈</a>
+                <h1>감독</h1>
+                
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="director.html" rel="external" class="ui-btn-active">감독</a></li>
+                        <li><a href="crew.html" rel="external">제작진</a></li>
+                        <li><a href="cotillard.html" rel="external">수상 이력</a></li>
+                    </ul>
+                </div>
+            </div>
+                
+            <div data-role="content">
+                <p>
+                    <img class="small" id="pic_Allen" src="Allen.png" alt="우디 앨런">
+                </p>
+                <h3>
+                    Woody Allen
+                </h3>
+                <h4>수상정보</h4>
+                <p>
+                    제 71회 골든 글로브 시상식(세실 B. 데밀 상)<br>
+                    제 64회 미국 작가 조합상(각본상)<br>
+                    제 17회 크리틱스 초이스 시상식(각본상)<br>
+                    제 69회 골든 글로브 시상식(각본상)<br>
+                    제 84회 미국 아카데미 시상식(각본상)<br>
+                    제 55회 칸영화제 명예 황금종려상<br>
+                    제 48회 미국 감독 조합상 공로상
+                            
+                </p>
+            </div>
+            
+            <div data-role="footer">
+                Copyright&copy; Midnight In Paris.
+            </div>
+            </div>
+    </body>
+</html>
+            
+            

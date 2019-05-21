@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, height-device-height, initial-scale=1.0, user-scalable-no">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css"/>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        
+        <link href="fotorama.css" rel="stylesheet">
+        <script src="fotorama.js"></script>
+        <title>오웬 윌슨</title>
+        
+        <style type="text/css">
+            
+            #pic_wilson{
+                margin-right: 10px;
+                margin-top: 10px;
+                -webkit-transition-propert:width;
+                -webkit-transition-duration: .3s;
+            }
+            
+            .small{
+                width:30%;   
+            }
+            
+            .targe{
+                width:100%;
+            }
+        </style>
+        
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // flag값을 false로 설정
+                $("#pic_wilson").data("flag", "false");
+                //이미지를 클릭하려면
+                $("#pic_wilson").click(function(){
+                    var bflag=$("#pic_wilson").data("flag");
+                    if(bflag=="false"){
+                        bflag="true";
+                        $("#pic_wilson").removeClass("small");
+                        $("#pic_wilson").addClass("large");
+                    }else{
+                        bflag="false"
+                        $("#pic_wilson").removeClass("large");
+                        $("#pic_wilson").addClass("small");
+                    }
+                    
+                        $("#pic_wilson").data("flag", bflag);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div data-role="page">
+    
+            <div data-role="header">
+                <a href="interduce.html" rel="external" data-icon="back">back</a>
+                <a href="index.html" rel="external" data-icon="home" data-iconpos="notext">홈</a>
+                <h1>오웬 윌슨</h1>
+                
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="wilson.html" rel="external" class="ui-btn-active">Owen Wilson</a></li>
+                        <li><a href="cotillard.html" rel="external">Marion Cotillard</a></li>
+                        <li><a href="rachel.html" rel="external">Rachel McAdams</a></li>
+                        <li><a href="brody.html" rel="external">Adrien Brody</a></li>
+                    </ul>
+                </div>
+            </div>
+                
+            <div data-role="content">
+                <p>
+                    <img class="small" id="pic_wilson" src="wilson.png" alt="오웬 윌슨">
+                </p>
+                <h3>
+                    Owen Wilson
+                </h3>
+                <p>
+                  주연 : 길 역<br>
+                    
+                작품활동 : 쥬랜더 2016, 마스터바인드 2015
+                            
+                </p>
+            </div>
+            
+            <div data-role="footer">
+                Copyright&copy; Midnight In Paris.
+            </div>
+            </div>
+    </body>
+</html>
+            
+            

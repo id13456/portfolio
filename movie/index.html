@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width, 
+                height=device-height, initai-scale=1.0, user-scaleble=no">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <link href="fotorama.css" rel="stylesheet">
+        <script src="fotorama.js"></script>
+        
+        <title>영화소개</title>
+        
+            <style tpye="text/css">
+                    #logo{
+                        width: 225px;
+                        height: 320px;
+                        text-intent: -999999px;
+                        background-image: url("paris.png");
+                        background-repeat: no-repeat;
+                        margin-top: 20px;
+                        margin-bottom: 0px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                
+                    .title_style{
+                        color: brown;
+                        padding-top: 10px;
+                    }
+                
+                </style>
+    </head> 
+    
+    <body>
+        <div data-role="page">
+            <div data-role="header" style="background-color:#fdf3d8">
+                <h2 id="logo"> </h2>
+            </div>
+    
+            <div data-role="content" style="background-color:#fcffc2">
+                <ul data-role="listview" data-inset="true" >
+                    <li><a href="screenshot.html" rel="external"><img src="screenshot.png"> <h3 class="title_style">스크린샷</h3></a></li>
+                    <li><a href="interduce.html" rel="external"><img src="interduce.png"> <h3 class="title_style">영화소개</h3></a></li>
+                    <li><a href="video.html" rel="external"><img src="video.png"> <h3 class="title_style">예고편</h3></a></li>
+                    <li><a href="map.html" rel="external"><img src="map1.png"> <h3 class="title_style">극장 위치</h3></a></li>                
+                </ul>
+            </div>
+            
+            <div data-role="footer" style="background-color:#fdf3d8">
+                Copylight&copy; Midnight In Paris.
+            </div>            
+        </div>            
+    </body>
+</html>

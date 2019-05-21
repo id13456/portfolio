@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, height-device-height, initial-scale=1.0, user-scalable-no">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css"/>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        
+        <link href="fotorama.css" rel="stylesheet">
+        <script src="fotorama.js"></script>
+        <title>레이첼 맥아덤즈</title>
+
+        <style type="text/css">
+        #pic_rachel{
+                margin-right: 10px;
+                margin-top: 10px;
+                -webkit-transition-propert:width;
+                -webkit-transition-duration: .3s;
+            }
+            
+            .small{
+                width:30%;   
+            }
+            
+            .targe{
+                width:100%;
+            }
+        </style>
+    
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // flag값을 false로 설정
+                $("#pic_rachel").data("flag", "false");
+                //이미지를 클릭하려면
+                $("#pic_rachel").click(function(){
+                    var bflag=$("#pic_rachel").data("flag");
+                    if(bflag=="false"){
+                        bflag="true";
+                        $("#pic_rachel").removeClass("small");
+                        $("#pic_rachel").addClass("large");
+                    }else{
+                        bflag="false"
+                        $("#pic_rachel").removeClass("large");
+                        $("#pic_rachel").addClass("small");
+                    }
+                    
+                        $("#pic_rachel").data("flag", bflag);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div data-role="page">
+    
+            <div data-role="header">
+                <a href="interduce.html" rel="external" data-icon="back">back</a>
+                <a href="index.html" rel="external" data-icon="home" data-iconpos="notext">홈</a>
+                <h1>레이첼 맥아덤즈</h1>
+                
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="wilson.html" rel="external">Owen Wilson</a></li>
+                        <li><a href="cotillard.html" rel="external">Marion Cotillard</a></li>
+                        <li><a href="rachel.html" rel="external" class="ui-btn-active">Rachel McAdams</a></li>
+                        <li><a href="brody.html" rel="external">Adrien Brody</a></li>
+
+                    </ul>
+                </div>
+            </div>
+                
+            <div data-role="content">
+                <p>
+                    <img class="small" id="pic_rachel" src="rachel.png" alt="레이첼 맥아덤즈">
+                </p>
+                <h3>
+                    Rachel McAdams
+                </h3>
+                <p>
+                  주연 : 아드리아나 역<br>
+                    
+                작품활동 : 단지 세상의 끝 2016, 말 드 피에르 2016
+                            
+                </p>
+            </div>
+            
+            <div data-role="footer">
+                Copyright&copy; Midnight In Paris.
+            </div>
+            </div>
+    </body>
+</html>
+            
+            
